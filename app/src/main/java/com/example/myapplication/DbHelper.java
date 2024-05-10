@@ -215,6 +215,8 @@ public class DbHelper extends SQLiteOpenHelper {
         return transList;
     }
 
+    //
+    //need attention-x
     public String sumInc() {
 
         Double sum = 0.0;
@@ -229,6 +231,8 @@ public class DbHelper extends SQLiteOpenHelper {
         return String.valueOf(sum-x);
     }
 
+    //
+    //need attention-y
     public String sumExp() {
 
         Double sum = 0.0;
