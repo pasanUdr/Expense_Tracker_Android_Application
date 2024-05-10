@@ -42,10 +42,8 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private String catSum;
     private String Total_Income_col = "TotalIncome";
-    private double x = 11001.05;
     private String Total_Expense_col = "TotalExpense";
     private String id2;
-    private double y = 6001.55;
 
     public DbHelper(Context context) {
 
@@ -216,7 +214,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     //
-    //need attention-x
+    //need attention-x - Done
     public String sumInc() {
 
         Double sum = 0.0;
@@ -228,11 +226,11 @@ public class DbHelper extends SQLiteOpenHelper {
             sum = cursor.getDouble(0);
         }
         cursor.close();
-        return String.valueOf(sum-x);
+        return String.valueOf(sum);
     }
 
     //
-    //need attention-y
+    //need attention-y - Done
     public String sumExp() {
 
         Double sum = 0.0;
@@ -244,7 +242,7 @@ public class DbHelper extends SQLiteOpenHelper {
             sum = Double.valueOf(cursor.getString(0));
         }
         cursor.close();
-        return String.valueOf(sum-y);
+        return String.valueOf(sum);
     }
 
     public double curBal() {
